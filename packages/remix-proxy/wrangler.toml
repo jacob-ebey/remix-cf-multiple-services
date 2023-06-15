@@ -1,0 +1,8 @@
+name = "brochure_iii_proxy"
+main = "src/index.ts"
+compatibility_date = "2023-05-18"
+
+services = [
+  { binding = "brochure_iii_blog", service = "brochure_iii_blog" },
+  { binding = "brochure_iii_marketing", service = "brochure_iii_marketing" },
+]

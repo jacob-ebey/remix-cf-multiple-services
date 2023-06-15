@@ -1,0 +1,23 @@
+{
+  "name": "remix-proxy",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "#dev": {
+
+    }
+  },
+  "scripts": {
+    "build": "node generate-manifest.js && tsc",
+    "dev": "wrangler dev --port 3000 src/index.ts"
+  },
+  "dependencies": {
+    "fetch-retry": "5.0.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "3.19.0",
+    "@remix-run/dev": "1.17.0",
+    "@remix-run/router": "1.6.3",
+    "wrangler": "3.1.0"
+  }
+}

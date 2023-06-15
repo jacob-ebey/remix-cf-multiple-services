@@ -1,14 +1,28 @@
 {
-  "name": ".",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
   "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "nx": "16.3.2"
-  },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "sites/*"
+  ],
+  "scripts": {
+    "postinstall": "patch-package",
+    "build2": "nx run-many --target=build",
+    "build": "remix build",
+    "start": "NODE_ENV=production wrangler dev --port 3000 build/index.js",
+    "dev": "remix-mono-dev remix-proxy --warm brochure_iii_blog --warm brochure_iii_marketing",
+    "watch": "nx run-many --target=watch"
+  },
+  "dependencies": {
+    "@remix-run/cloudflare": "1.17.0",
+    "@remix-run/react": "1.17.0",
+    "isbot": "3.6.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "nx": "16.3.2",
+    "patch-package": "7.0.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "^5.1.3"
+  }
 }

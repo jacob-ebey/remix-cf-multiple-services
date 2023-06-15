@@ -4,6 +4,10 @@
 dist
 tmp
 /out-tsc
+public/build/
+build/
+.cache/
+.wrangler/
 
 # dependencies
 node_modules
@@ -16,6 +20,7 @@ node_modules
 *.launch
 .settings/
 *.sublime-workspace
+.wrangler/
 
 # IDE - VSCode
 .vscode/*
